@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+  <script>
+
+function test(){
+  $("span").each(function(){
+   $(this).html( $(this).html() + " " + $(this).prev().val() );//this - 현재 자기자신을 html5형식의 문자열로 반환 prev 자기자신앞에 위치한 형제 엘리먼트를 반환
+ });
+ $('textarea').val("");
+}
+
+  </script>
+
+</head>
+<body>
+
+  학번 : <textarea rows="1" cols="20"></textarea><span id="1"></span> <br>
+  성명 : <textarea rows="1" cols="20"></textarea><span id="2"></span> <br>
+  <input type="button" value="확인" onclick="test()">
+</body>
+</html>

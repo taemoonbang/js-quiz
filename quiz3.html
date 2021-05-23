@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+  $(document).ready(function () {
+             $('#all-check').change(function () {
+                 if (this.checked) {
+                     $('#a').children().prop('button', true);
+                 } else {
+                     $('#a').children().prop('button', false);
+                 }
+             });
+             $('#a').click(function() {
+         				$('#A').fadeOut(100);
+         				});
+
+                 $('#b').click(function() {
+                     $('#B').fadeOut(100);
+                   });
+                   $('#c').click(function() {
+                 				$('#C').fadeOut(100);
+                 				});
+
+                        $('#all-check').click(function() {
+                             $('p').fadeOut(100);
+                             });
+
+                      $('#all-check').click(function(){
+                        $('p').show();
+                      });
+         });
+
+
+  </script>
+
+</head>
+<body>
+
+<input type="checkbox" id="all-check"/>
+ <label id="1">모두보기</label>
+   <input type="button"id="a"value="경제면 감추기">
+   <input type="button"id="b" value="사회면 감추기">
+   <input type="button"id="c" value="스포츠면 감추기">
+
+
+  <div class="a"><br>
+<p id="A">연기금, 1분기 15.6조 순매도...불법 공매도 처벌 강화</p>
+  </div>
+  <div class="b"><br>
+<p id="B">지역사회에서 남아공 변이 첫 확인…변이 코로나 41건 추가</p>
+  </div>
+  <div class="c"><br>
+<p id="C">무리뉴 "손흥민 이해 안 가, 득점 기회에서 왜 패스를?"</p>
+  </div>
+
+
+</body>
+</html>

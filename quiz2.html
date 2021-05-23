@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+      $(document).ready(function(){
+        $('jumun').click(function(){
+          var price =0;
+          $('input:checkbox:checked').each(function(){
+            if($(this).is('#ameri')){
+              price += 2000 * a.value;
+            }
+            else if($(this).is('#cafe')){
+              price += 2500 * b.value;
+            }
+            else if($(this).is('#choco')){
+              price += 2500 * c.value;
+            }
+            else if($(this).is('#kapu')){
+              price += 2800- * d.value;
+            }
+          })
+
+          $('#out').text(price)
+        })
+      })
+  </script>
+<style>
+  input{text-align : right;}
+</style>
+</head>
+<body>
+    <h2>메뉴</h2><br/>
+    <form>
+      <input type="checkbox" id="ameri">아메리카노(2,500원)<input type="text"size="3"value="0" id="a"/><br>
+      <input type="checkbox" id="cafe">카페라떼(2,500원)<input type="text"size="3"value="0" id="b"/><br>
+      <input type="checkbox" id="choco">핫초코(2,500원)<input type="text"size="3"value="0" id="c"/><br>
+      <input type="checkbox" id="kapu">카푸치노(2,800원)<input type="text"size="3"value="0" id="d"/><br>
+      <input type="button" id="jumun" value="주문하기" />
+
+    </form>
+  <div id="out"></div>
+
+</body>
+</html>
